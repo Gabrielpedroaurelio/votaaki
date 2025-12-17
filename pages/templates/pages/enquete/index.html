@@ -1,0 +1,16 @@
+{%extends 'pages/model.html'%}
+{%load static%}
+    {%block titleheader%}
+    <link rel="stylesheet" href="{%static 'style/index/index.css' %}">
+    <title>Vota Aki Enquetes</title>
+    {%endblock%}
+{%block body%}
+    <main>
+{%for nque in object_list%}
+<div>
+    {{nque.title}}
+</div>
+{%empty%}
+{%endfor%}
+    </main>
+{%endblock%}

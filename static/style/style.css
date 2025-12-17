@@ -1,0 +1,64 @@
+:root {
+    --c1: #0d1117;
+    --c2: #121212;
+    --c3: #eee;
+    --c4: #00ffa5;
+    --c5: #1e90ff;
+    --c6: #8a2be2;
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+
+}
+
+body {
+    background-image:
+        radial-gradient(circle at 30% 44%, var(--c5), transparent 30%),
+        radial-gradient(circle at 80% 40%, var(--c6), transparent 40%),
+        radial-gradient(circle at 76% 73%, var(--c4), transparent 45%),
+
+        linear-gradient(to top, var(--c6), var(--c2));
+    background-attachment: fixed;
+
+    animation-fill-mode: both;
+    display: grid;
+    grid-template-rows: 60px calc(100vh - 60px);
+}
+
+header {
+    background-color: #0d1117a5;
+    -webkit-backdrop-filter: blur(70);
+    backdrop-filter: blur(70);
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    box-shadow: 0px 0px 5px #0d1117;
+   
+}
+
+header a {
+    text-decoration: none;
+    color: #eee;
+    padding: 5px 10px;
+}
+header a:hover{
+    color: #00ffa5;
+ 
+
+}
+
+header>div:first-child{
+    
+}
+header>nav:last-child{
+    max-width: 300px;
+   
+    display: flex;
+    justify-content: space-around;
+}

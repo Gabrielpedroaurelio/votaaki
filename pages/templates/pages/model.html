@@ -1,0 +1,62 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="pt-ao">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{%static 'images/logoVotaAki.png'%}" type="image/x-icon">
+    <link rel="stylesheet" href="{%static 'libs/bootstrap-5.3.3-dist/css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{%static 'libs/@mdi/css/materialdesignicons.css'%}">
+    <link rel="stylesheet" href="{%static 'style/style.css'%}">
+    {%block titleheader%}
+    <title>Document</title>
+    {%endblock%}
+    {% block configuracoes_head%}
+
+    {%endblock%}
+</head>
+
+<body>
+    {% block header%}
+    <header>
+  
+  <div>
+    <img src="{%static 'images/logoVotaAki.png'%}" alt="" width="50">
+ 
+  </div>
+            <nav>
+                <a href="{%url 'index-site'%}">
+                   <!-- <span class="mdi mdi-home"></span>-->
+                    <span class="txt">Home</span>
+                </a>
+                <a href="{%url 'index-poll'%}">
+                 <!--   <span class="mdi mdi-store"></span>-->
+                    <span class="txt">Enquetes</span>
+                </a>
+                {% if  request.user.is_authenticated %}
+                <a href="">
+                 <!--   <span class="mdi mdi-account"></span>-->
+                    <span class="txt">Perfil</span>
+                </a>
+                {%else%}
+                <a href="">
+                    <!--<span class="mdi mdi-login"></span>-->
+                    <span class="txt">Entrar</span>
+                </a>
+                <a href="">
+                    <!--<span class="mdi mdi-signin"></span>-->
+                    <span class="txt">Cadastrar-se</span>
+                </a>
+                {%endif%}
+            </nav>
+     
+    </header>
+    {%endblock%}
+    {%block body%}
+    {%endblock%}
+
+
+</body>
+
+</html>
